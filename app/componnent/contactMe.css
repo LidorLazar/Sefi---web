@@ -81,8 +81,9 @@ a{
     right: 180px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .container{
+        overflow-x: hidden;
         display: flex;
         flex-direction: column-reverse;
         background-color: #D9CBC6;
@@ -156,4 +157,8 @@ a{
         bottom: 20px;
         right: 180px;
     }
+}
+
+@media screen and (max-width: 900px){
+
 }
