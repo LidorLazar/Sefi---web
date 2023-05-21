@@ -159,6 +159,83 @@ a{
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (min-width: 300px) and (max-width: 900px) {
+    .container{
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #D9CBC6;
+        margin: 0 auto;
+        padding:1em ;
+        height: 600px;
+        width: 800px;
+        border-radius: 36px 36px ;
+    }
 
+    h2{
+        display: flex;
+        justify-content: start;
+        font-size: 30px;
+        font-weight: bold;
+        top: -200px;
+        right: 0;
+    }
+
+    .contact-me input, textarea{
+        border-radius: 10px;
+        display: flex;
+        justify-items: center;
+        padding: 15px;
+        margin: 9px;
+        width: 600px;
+        height: 5px;
+        top: 0;
+    }
+
+    textarea{
+        height: 100px;
+    }
+
+    button{
+        background: #7A7170;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        border: none;
+        width: 600px;
+        height: 30px;
+        margin: 10px;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        right:65px;
+        top: 15px;
+    }
+
+    .social-media-contact{
+        display: flex;
+        flex-direction: row;
+        top: 200px;
+        right: 350px;
+        height: 2px;
+    }
+
+    a{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .contact-me-details{
+        right: -300px;
+        bottom: 280px;
+    }
+
+    .contact-me-details .whatsapp-icon{
+        bottom: 25px;
+        right: 340px;
+    }
+
+    .contact-me-details .email-icon{
+        bottom: 25px;
+        right: 340px;
+    }
 }
