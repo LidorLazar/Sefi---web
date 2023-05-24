@@ -1,241 +1,259 @@
-body{
-    direction: rtl;
-}
 
-.container{
-    display: flex;
-    background-color: #D9CBC6;
-    padding:1em ;
-    height: 350px;
-    width: 1200px;
-    margin: 0 auto;
-    border-radius: 36px 36px ;
-}
+/*For mobile*/
+@media (max-width: 390px){
+    body{
+        direction: rtl;
+    }
 
-.contact-me input, textarea{
-    display: flex;
-    position: relative;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 9px;
-    right: 70px;
-    width: 400px;
-    height: 5px;
-    top: 30px;
-}
-
-textarea{
-    height: 100px;
-}
-
-button{
-    background: #7A7170;
-    border: none;
-    width: 60px;
-    height: 30px;
-    margin: 10px;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-    position: relative;
-    right: 410px;
-    top: 30px;
-}
-
-h2{
-    display: flex;
-    position: relative;
-    font-size: 25px;
-    font-weight: bold;
-    top: 30px;
-    right: 150px;
-}
-
-.social-media-contact{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 150px;
-    right: 350px;
-    height: 2px;
-}
-
-a{
-    font-size: 11px;
-}
-.contact-me-details{
-    right: -300px;
-    position: relative;
-    bottom: 60px;
-}
-
-.contact-me-details .whatsapp-icon{
-    position: relative;
-    bottom: 20px;
-    right: 180px;
-}
-
-.contact-me-details .email-icon{
-    position: relative;
-    bottom: 20px;
-    right: 180px;
-}
-
-@media screen and (max-width: 500px) {
     .container{
-        overflow-x: hidden;
         display: flex;
         flex-direction: column-reverse;
         background-color: #D9CBC6;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 550px;
         margin: 0 auto;
-        padding:1em ;
-        height: 600px;
-        width: 350px;
-        border-radius: 36px 36px ;
+        border-radius: 36px 36px;
+
+    }
+    .contact-me{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 30px;
+        width: 85%;
     }
 
-    h2{
+    input, textarea{
         display: flex;
         justify-content: center;
-        font-size: 30px;
-        font-weight: bold;
-        top: -200px;
-        right: 0;
-    }
-    .contact-me input, textarea{
+        padding: 3px;
+        margin: 4px;
         border-radius: 10px;
-        display: flex;
-        align-content: end;
-        padding: 15px;
-        margin: 9px;
-        right: 0;
-        width: 300px;
-        height: 5px;
-        top: 0;
+        text-align: center;
+        width: 100%;
+
     }
 
     textarea{
-        height: 100px;
+        height: 150px;
     }
 
     button{
-        background: #7A7170;
-        border: none;
-        width: 300px;
-        height: 30px;
-        margin: 10px;
-        color: white;
-        cursor: pointer;
+        background-color: #7A7170;
         border-radius: 10px;
-        right:0;
-        top: 15px;
+        justify-content: center;
+        margin: 4px;
+        padding: 5px;
+        color: white;
+        width: 100%;
+
     }
 
-    .social-media-contact{
+    button:hover{
+        background-color: #71c546;
+        transform: scale(1.1);
+    }
+
+    .contact-me-details{
         display: flex;
-        flex-direction: row;
-        top: 200px;
-        right: 350px;
-        height: 2px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
     }
-
+    h2{
+        font-weight: bold;
+        font-size: 35px;
+    }
     a{
         font-size: 11px;
-        font-weight: bold;
+        position: relative;
+        left: 10px;
+        bottom: -30px;
     }
-    .contact-me-details{
-        right: -300px;
-        bottom: 280px;
+    .whatsapp-icon{
+        position: relative;
+        top: 13px;
+        right: 113px;
     }
-
-    .contact-me-details .whatsapp-icon{
-        bottom: 20px;
-        right: 180px;
-    }
-
-    .contact-me-details .email-icon{
-        bottom: 20px;
-        right: 180px;
+    .email-icon{
+        position: relative;
+        top: 13px;
+        right: 113px;
     }
 }
+/*For tablet*/
 
-@media screen and (min-width: 300px) and (max-width: 900px) {
+@media (max-width: 840px){
+    body{
+        direction: rtl;
+    }
+
     .container{
-        overflow-x: hidden;
         display: flex;
         flex-direction: column-reverse;
         background-color: #D9CBC6;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 550px;
         margin: 0 auto;
-        padding:1em ;
-        height: 600px;
-        width: 800px;
-        border-radius: 36px 36px ;
+        border-radius: 36px 36px;
     }
 
-    h2{
+    .contact-me{
         display: flex;
-        justify-content: start;
-        font-size: 30px;
-        font-weight: bold;
-        top: -200px;
-        right: 0;
+        flex-direction: column;
+        position: relative;
+        top: 30px;
+        width: 85%;
     }
-
-    .contact-me input, textarea{
+    input, textarea{
+        display: flex;
+        justify-content: center;
+        padding: 3px;
+        margin: 4px;
         border-radius: 10px;
-        display: flex;
-        justify-items: center;
-        padding: 15px;
-        margin: 9px;
-        width: 600px;
-        height: 5px;
-        top: 0;
+        text-align: center;
+        width: 100%;
+
     }
 
     textarea{
-        height: 100px;
+        height: 150px;
     }
 
     button{
-        background: #7A7170;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        border: none;
-        width: 600px;
-        height: 30px;
-        margin: 10px;
-        color: white;
-        cursor: pointer;
+        background-color: #7A7170;
         border-radius: 10px;
-        right:65px;
-        top: 15px;
+        justify-content: center;
+        margin: 4px;
+        padding: 5px;
+        color: white;
+        width: 100%;
+
     }
 
-    .social-media-contact{
+    button:hover{
+        background-color: #71c546;
+        transform: scale(1.1);
+    }
+
+    .contact-me-details{
         display: flex;
-        flex-direction: row;
-        top: 200px;
-        right: 350px;
-        height: 2px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
+    }
+    h2{
+        font-weight: bold;
+        font-size: 35px;
     }
 
     a{
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 15px;
+        position: relative;
+        left: 10px;
+        bottom: -30px;
     }
+    .whatsapp-icon{
+        position: relative;
+        top: 10px;
+        right: 130px;
+    }
+    .email-icon{
+        position: relative;
+        top: 10px;
+        right: 130px;
+    }
+}
+@media (min-width: 835px){
+    .body{
+        direction: rtl;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: #D9CBC6;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 400px;
+        margin: 0 auto;
+        border-radius: 36px 36px;
+    }
+    .contact-me{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    input, textarea{
+        display: flex;
+        justify-content: start;
+        padding: 3px;
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    textarea{
+        height: 150px;
+    }
+
+    button{
+        background-color: #7A7170;
+        position: relative;
+        border-radius: 10px;
+        margin: 4px;
+        padding: 5px;
+        color: white;
+        width: 20%;
+        left: 7px;
+
+    }
+
+    button:hover{
+        background-color: #71c546;
+        transform: scale(1.1);
+    }
+
     .contact-me-details{
-        right: -300px;
-        bottom: 280px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 85%;
+        justify-content: flex-start;
+        align-items:end ;
     }
 
-    .contact-me-details .whatsapp-icon{
-        bottom: 25px;
-        right: 340px;
+    h2{
+        position: relative;
+        font-size: 35px;
+        font-weight: bold;
+
     }
 
-    .contact-me-details .email-icon{
-        bottom: 25px;
-        right: 340px;
+    a{
+        position: relative;
+        font-size: 15px;
+        top: 15px;
+    }
+
+    .whatsapp-icon{
+        position: relative;
+        top: -5px;
+        right: 253px;
+    }
+    .email-icon{
+        position: relative;
+        top: -5px;
+        right: 253px;
     }
 }

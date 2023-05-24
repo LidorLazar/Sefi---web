@@ -1,23 +1,23 @@
+'use client';
 import './contactMe.css'
 import React from 'react';
-
 
 const ContactMe = () => {
 
     return(
         <div className={'container'}>
-            <form className={"contact-me"} action={'mailto:email@example.com?subject=Mail from our Website'} method={'post'} >
+            <div className={"contact-me"}>
+                {/*In form i need to add mail to */}
+                <form >
                     <input type={"text"} placeholder={'שם מלא'} required={true} />
                     <input type={"tel"} placeholder={"טלפון"} required={true}/>
                      <input type={"email"} placeholder={"אימייל"} required={true}/>
                      <textarea placeholder={"כתבו לי "} required={true}/>
-                <div>
-                </div>
-                <button>שלח</button>
+                <button onClick={()=> console.log('test')}>שלח</button>
             </form>
-            <h2>צרו איתי קשר</h2>
-            <div className={"social-media-contact"}>
+            </div>
                 <div className={"contact-me-details"}>
+                    <h2>צרו איתי קשר</h2>
                     <a href={"http://api.whatsapp.com/send?phone=+972526006313&" +
                         "text=היי%20לידור%20,ראיתי את האתר שלך אשמח לדבר איתך &source=&data="}>
                         זמינה גם בוואטסאפ : 052-1234-567
@@ -27,7 +27,6 @@ const ContactMe = () => {
                     <a href={"mailto:email@example.com"}>מוזמנים לכתוב לי : mail@mail.com</a>
                     <svg className={"email-icon"}  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>                </div>
             </div>
-        </div>
 
     )
 }
