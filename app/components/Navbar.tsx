@@ -1,6 +1,10 @@
+'use client'
 import Image from "next/image";
 
 export default function Navbar({name, description}: {name: string, description: string}) {
+  const scrollToEnd = () => {
+    window.scrollTo(0, document.body.scrollHeight)
+  }
   return (
     <header
       dir="rtl"
@@ -21,11 +25,13 @@ export default function Navbar({name, description}: {name: string, description: 
             height={140}
           />
           <div className="w-full flex flex-col gap-2">
-            <div className="font-black sm:text-4xl text-3xl">{name}</div>
-            <div className="font-base sm:text-xl text-lg">{description}</div>
+            <div className="font-black sm:text-4xl text-2xl">{name}</div>
+            <div className="font-base sm:text-xl text-base">{description}</div>
           </div>
         </div>
-        <button className="sm:left-10 lg:left-20 select-none cursor-pointer hover:bg-zinc-800 active:bg-zinc-700 left-6 h-10 absolute bottom-3 transform flex flex-row text-white font-bold items-center justify-center sm:w-36 w-32 transition-all rounded-full bg-zinc-950 outline outline-3 sm:outline-4 outline-[#FAF4F2]">
+        <button 
+          onClick={scrollToEnd}
+          className="sm:left-10 lg:left-20 select-none cursor-pointer hover:bg-zinc-800 active:bg-zinc-700 left-6 sm:h-10 h-8 absolute bottom-3 transform flex flex-row text-white text-sm sm:text-lg font-bold items-center justify-center sm:w-36 w-32 transition-all rounded-full bg-zinc-950 outline outline-3 sm:outline-4 outline-[#FAF4F2]">
             צרו קשר
         </button>
       </div>

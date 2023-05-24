@@ -18,7 +18,7 @@ export default function Plan({ price, name, description, image }: PlanProps) {
           <span className="ml-2 font-base">₪{price}</span>
         </div>
       </div>
-      <div className="mt-4 text-base text-justify w-full">{description}</div>
+      <div className="mt-4 text-base sm:text-justify w-full">{description}</div>
     </div>
   );
 }
