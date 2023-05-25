@@ -56,7 +56,7 @@ export default function Extra() {
         <div dir="rtl" className="text-2xl font-bold">
             תכניות הייעוץ וההדרכה שלי
         </div>
-        <div dir="rtl" className="flex lg:flex-row flex-col w-full gap-8 justify-between flex-wrap">
+        <div dir="rtl" className="flex sm:flex-row flex-col w-full gap-8 justify-between flex-wrap">
             {plans.map(plan =>{
                 return <Plan price={plan.price} description={plan.description} name={plan.name} image={plan.image} key={plan.name} />
             })}
