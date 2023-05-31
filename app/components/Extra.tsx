@@ -2,21 +2,22 @@ import Plan, { PlanProps } from "./Plan"
 
 const plans: PlanProps[] = [
     {
-        name: "תכנית 1",
+        name: "הדרכת הורים",
+        price: 123,
+        description: "הדרכת הורים מביאה איתה הקשבה לקשיים ולאתגרים היומיומיים של ההורה מול הילדים ומול עצמו. היא מסייעת להם להבין טוב יותר את עולמו הפנימי של הילד ומאפשרת בניית מערכת יחסים של אמון, כבוד הדדי ושיתוף פעולה. ",
+        image: "https://images.unsplash.com/photo-1496275068113-fff8c90750d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+        name: "ליווי צוותי חינוך\n" +
+            "לגיל הרך",
         price: 123,
         description: "לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס ",
         image: "https://images.unsplash.com/photo-1496275068113-fff8c90750d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
     },
     {
-        name: "תכנית 2",
+        name: "המודל",
         price: 123,
-        description: "לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס ",
-        image: "https://images.unsplash.com/photo-1496275068113-fff8c90750d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-        name: "תכנית 3",
-        price: 123,
-        description: "לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס ",
+        description: "הרצאת החשיפה שלי לקראת תהליך הדרכה בגן, תיקח אתכן למסע הכרות עם צדדים שלא הכרתן בהורות ובתהליכי חינוך... ",
         image: "https://images.unsplash.com/photo-1496275068113-fff8c90750d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
     },
     {

@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import logoImage from '../../public/images/logo-image.png'
 
 export default function Navbar({name, description}: {name: string, description: string}) {
   const scrollToEnd = () => {
@@ -17,7 +18,7 @@ export default function Navbar({name, description}: {name: string, description: 
         <div className="flex flex-row gap-4 sm:gap-8 h-20 sm:h-32 sm:absolute bottom-0 transform items-center sm:items-start">
           <Image
             src={
-              "https://images.unsplash.com/photo-1646444022733-45826815d70a?crop=faces&fit=crop&h=140&w=140"
+              logoImage
             }
             alt={"profile"}
             className="w-20 h-20 sm:w-32 sm:h-32 rounded-full transition-all outline outline-2 sm:outline-4 outline-[#FAF4F2]"

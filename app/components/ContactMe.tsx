@@ -1,15 +1,39 @@
 'use client';
 
+import {useState} from "react";
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 export default function ContactMe() {
+    const [fullName , setFullName] = useState('')
+    const [tel , setTel] = useState('')
+    const [email , setEmail] = useState('')
+    const [message , setMessage] = useState('')
+
+    const sendEmail = (e:any) => {
+
+        const data:{} = {fullName:fullName, email:email, tel:tel, message:message}
+        e.preventDefault();
+
+        emailjs.send('service_i0zjydp', 'template_nlx5lnf',data,'M1XBjS0AGd4Ba_J8A')
+            .then((result) => {
+                toast.success("תודה , ניצור איתך קשר בהקדם ");
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     return (
         <div dir="rtl" className="w-11/12 mt-10 py-10 gap-8 bg-[#D9CBC6] rounded-t-2xl flex lg:flex-row max-lg:items-center flex-col-reverse justify-center">
-            <form className="flex flex-col lg:w-1/2 w-4/5 items-end gap-2">
-                <input className="h-10 px-2 rounded-lg w-full" type="text" placeholder='שם מלא' required />
-                <input className="h-10 px-2 rounded-lg w-full" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="טלפון" required />
-                <input className="h-10 px-2 rounded-lg w-full" type="email" placeholder="אימייל" required />
-                <textarea className="h-40 p-2 rounded-lg w-full" placeholder="כתבו לי..." required />
-                <button className="bg-[#7A7170] text-white text-lg rounded-lg hover:bg-[#5d5554] active:bg-[#9e9291] transition-all h-12 w-32" onClick={() => console.log('test')}>שלח</button>
+            <ToastContainer/>
+            <form className="flex flex-col lg:w-1/2 w-4/5 items-end gap-2" >
+                <input className="h-10 px-2 rounded-lg w-full" type="text" placeholder='שם מלא' name={fullName} onChange={(e) => setFullName(e.target.value)} required />
+                <input className="h-10 px-2 rounded-lg w-full" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" name={tel} placeholder="טלפון" onChange={(e) => setTel(e.target.value)} required />
+                <input className="h-10 px-2 rounded-lg w-full" type="email" placeholder="אימייל" name={email} onChange={(e) => setEmail(e.target.value)} required />
+                <textarea className="h-40 p-2 rounded-lg w-full" placeholder="כתבו לי..." name={message} onChange={(e)=> setMessage(e.target.value)} required />
+                <button className="bg-[#7A7170] text-white text-lg rounded-lg hover:bg-[#5d5554] active:bg-[#9e9291] transition-all h-12 w-32" onClick={sendEmail} type="submit"  >שלח</button>
             </form>
             <div className="flex flex-col gap-4 max-lg:w-4/5">
                 <p className="select-none text-3xl font-extrabold">צרו איתי קשר</p>
@@ -28,4 +52,3 @@ export default function ContactMe() {
 
     )
 }
-

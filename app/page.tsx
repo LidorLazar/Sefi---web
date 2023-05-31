@@ -2,6 +2,7 @@ import About from '@/app/components/About'
 import Extra from '@/app/components/Extra'
 import Navbar from '@/app/components/Navbar'
 import ContactMe from "@/app/components/ContactMe";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Extra />
       </section>
       <ContactMe />
+        <Footer/>
     </main>
   )
 }
