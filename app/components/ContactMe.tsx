@@ -17,6 +17,8 @@ export default function ContactMe() {
         const data:{} = {fullName:fullName, email:email, tel:tel, message:message}
         e.preventDefault();
 
+
+
         emailjs.send('service_i0zjydp', 'template_nlx5lnf',data,'M1XBjS0AGd4Ba_J8A')
             .then((result) => {
                 toast.success("תודה , ניצור איתך קשר בהקדם ",  {
@@ -32,6 +34,7 @@ export default function ContactMe() {
             }, (error) => {
                 console.log(error.text);
             });
+
     };
 
     return (
