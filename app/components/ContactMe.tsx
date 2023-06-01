@@ -19,7 +19,16 @@ export default function ContactMe() {
 
         emailjs.send('service_i0zjydp', 'template_nlx5lnf',data,'M1XBjS0AGd4Ba_J8A')
             .then((result) => {
-                toast.success("תודה , ניצור איתך קשר בהקדם ");
+                toast.success("תודה , ניצור איתך קשר בהקדם ",  {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                })
             }, (error) => {
                 console.log(error.text);
             });
