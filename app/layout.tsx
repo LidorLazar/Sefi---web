@@ -1,3 +1,5 @@
+
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata = {
@@ -14,6 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-[#FAF4F2]'>{children}</body>
+      <Script src="/plugins/nagishli.js?v=2.3" defer />
+      <Script id='nagishli'>
+        {
+          `nl_pos = "bl";
+          nl_color = "gray";
+          nl_dir = "/plugins/";
+        `}
+      </Script>
     </html>
   )
 }
